@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bridge-enrollment
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bridge_enrollment_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: method
+  info:
+    title: Bridge Enrollment API
+    description: REST API for Bridge Enrollment Management System
+    version: 1.0.0
+
+logging:
+  level:
+    com.bridge.enrollment: DEBUG
+    org.hibernate.SQL: DEBUG
