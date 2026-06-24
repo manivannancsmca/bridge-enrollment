@@ -1,3 +1,4 @@
+
 # Bridge Enrollment API
 
 A full CRUD REST API for managing student enrollments, built with Spring Boot 4.0.6 and Java 21.
@@ -119,3 +120,4 @@ http://localhost:8080/swagger-ui.html
 - `PENDING`
 - `GRADUATED`
 - `SUSPENDED`
+
